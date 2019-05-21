@@ -17,7 +17,7 @@ If you are a senior software engineer, then it should not take very long to comp
 
 Clone this entire repository and only refactor the file named 'LocationTrackerRefactorTest.ts'.
 
-*You will upload your refactored file when you open the form to submit all of your answers.*
+*You will upload your refactored file(s) when you open the form to submit all of your answers.*
 
 Here are some important instructions to follow during your refactor:
 
