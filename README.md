@@ -22,7 +22,7 @@ Clone this entire repository and only refactor the file named 'LocationTrackerRe
 Here are some important instructions to follow during your refactor:
 
  - Create comments for the reasons why you have made particular changes.
- - Do not worry about perfect execution of your code after refactoring. Our primary concern is your understanding and ability to write quality code.
+ - Do not worry about perfect execution of your code after refactoring. Our primary concern is your understanding and ability to write quality code in general.
 
 ## PART 3 - Provide a solution to an engineering problem
 
