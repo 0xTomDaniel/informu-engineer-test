@@ -25,6 +25,7 @@ Here are some important instructions to follow during your refactor:
  - Do not worry about perfect execution of your code after refactoring. Our primary concern is your understanding and ability to write quality code in general.
  - Consider refactoring both syntax and module architecture.
  
+ ---
  
  ***Note:** If you do not follow these instructions then you will fail the test.*
 
@@ -75,5 +76,6 @@ App can always start execution based on a beacon region enter and exit event fro
 
 *You will type or paste your written solution when you open the form to submit all of your answers. You can optionally upload diagrams or other supporting files along with your solution.*
 
+---
 
 ***Note:** We are not looking for extreme detail. However, your solution should address all factors detailed above. If we cannot easily understand how your solution addresses all of the factors of the problem, then you will fail the test. Your answer should be unambigiuous and clearly include all of your assumptions*
