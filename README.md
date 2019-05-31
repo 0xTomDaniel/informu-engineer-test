@@ -15,7 +15,7 @@ If you are a senior software engineer, then it should not take very long to comp
 
 ## PART 2 - Refactor a TypeScript module
 
-Clone this entire repository and only refactor the file named 'LocationTrackerRefactorTest.ts'.
+Clone or fork this entire repository and only refactor the file named 'LocationTrackerRefactorTest.ts'.
 
 *You will upload your refactored file(s) when you open the form to submit all of your answers.*
 
