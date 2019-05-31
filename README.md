@@ -23,11 +23,18 @@ Here are some important instructions to follow during your refactor:
 
  - Create comments for the reasons why you have made particular changes.
  - Do not worry about perfect execution of your code after refactoring. Our primary concern is your understanding and ability to write quality code in general.
+ - Consider refactoring both syntax and module architecture.
+ 
+ ***Note:** If you do not follow these instructions then you will fail the test.*
 
 ## PART 3 - Provide a solution to an engineering problem
 
 ### Problem
 Send a phone notification only when the user leaves an item behind and should have it with them.
+
+**Sub Problem(s)**
+- Limit the number of false notifications that the user receives
+- Consider finding more problems related to the main problem from the factors detailed below.
 
 ### Definitions
 
@@ -39,16 +46,17 @@ Send a phone notification only when the user leaves an item behind and should ha
 
 ### Requirements
 
-- App has low battery consumption on phone.
-- High precision location of Mu tag (5-10 meters)
-	- at any point it goes out of range of the phone
+- App should not consume more than 5-10% of phone battery every 24 hours while in background.
+- High precision location (5-10 meters) of Mu tag when...
+	- Mu tag is not with the user
 	- while app is in foreground
 - Send a phone notification when it has been predicted that the user is leaving an item behind but should have it with them.
+	- No more than 1 false notification per day.
 
 ### Constraints
 
 - BLE 4.2
-- Up to 20 false positive beacon region exits per day while Mu tag is near phone at -50dBm.
+- Will receive up to 30 false positive beacon region exits from CLLocationManager per day while Mu tag is near phone at -50dBm. During these false positive occurances, iOS shows no signal from the Mu tag for up to 1 minute.
 	- Mu tag signal is out of range at ~-90dBm reading on phone.
 	- At a -25dBm reading on phone, the Mu tag is zero distance from the phone.
 	- At -90dBm the Mu tag is about 20 meters from the phone in open space, or about 5 meters from the phone with several walls or obstructions.
@@ -57,7 +65,6 @@ Send a phone notification only when the user leaves an item behind and should ha
 - iOS location tracking just being started or accuracy increased can take anywhere from 30s to 1m to pinpoint a location of 15-20 meter accuracy.
 - In particular situations, location accuracy can only be pinpointed to 50-100 meters. This can occur in cities such as Manhattan, NYC.
 - Constant highest accuracy location tracking on iOS will kill an iPhone 8 battery in about 4-6 hours.
-- App should not consume more than 5% of phone battery per day while in background.
 
 ### Knowledge
 
@@ -67,4 +74,4 @@ App can always start execution based on a beacon region enter and exit event fro
 
 *You will type or paste your written solution when you open the form to submit all of your answers. You can optionally upload diagrams or other supporting files along with your solution.*
 
-***Note:** We are not looking for extreme detail. Just enough detail where we can understand the concepts of your solution.*
+***Note:** We are not looking for extreme detail. However, your solution should address all factors detailed above. If we cannot easily understand how your solution addresses all of the factors of the problem, then you will fail the test. Your answer should be unambigiuous and clearly include all of your assumptions*
